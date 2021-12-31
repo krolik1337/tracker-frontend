@@ -223,7 +223,7 @@ export default {
     this.line_chart_x = arr;
     const header = { "Content-Type": "application/json" };
     axios
-      .get("http://localhost:2137/stats", { header })
+      .get("https://tracker-srvr.herokuapp.com/stats", { header })
       .then((response) => {
         this.logs = response.data.raw_data;
         this.pages = response.data.pages;
